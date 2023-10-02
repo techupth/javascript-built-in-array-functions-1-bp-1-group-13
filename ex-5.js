@@ -5,8 +5,14 @@ const students = [
   { name: "Joan", score: 95 },
 ];
 
+function sum(arrayNumber, currentValue) {
+  return arrayNumber + currentValue;
+}
+
 function getAverageStudentScore(students) {
-  // Start coding here
+  let studentScore = students.map((students) => students.score)
+  let avg = studentScore.reduce(sum , 0) / studentScore.length;
+  return console.log(avg)
 }
 
 getAverageStudentScore(students); // Output: 87.5
